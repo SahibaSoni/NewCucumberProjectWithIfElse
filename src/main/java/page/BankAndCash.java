@@ -74,7 +74,7 @@ public class BankAndCash {
 		 }
 	}
 
-	public String getPageTitle(WebDriver driver) 
+	public String getPageTitleDashboard(WebDriver driver) 
 	{
 		 return driver.getTitle();
 		

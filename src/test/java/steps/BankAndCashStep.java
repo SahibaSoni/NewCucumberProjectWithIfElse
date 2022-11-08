@@ -57,6 +57,7 @@ public class BankAndCashStep extends TestBase{
 		switch(button)
 		{
 		case "login" : bankCash.clickSignIn();
+		               
 		break;
 		
 		case "newAccount" : bankCash.clickNewAccount();
@@ -74,8 +75,9 @@ public class BankAndCashStep extends TestBase{
 	@Then("^User should land on Dashboard page$")
 	public void user_should_land_on_Dashboard_page(){
 	   
+		takeScreenshot();
 		String expectedTitle = "Dashboard- iBilling";
-		String actuleTitle = bankCash.getPageTitle(driver);
+		String actuleTitle = bankCash.getPageTitleDashboard(driver);
 		Assert.assertEquals("Page not found ",expectedTitle, actuleTitle);
 	}
 	
@@ -124,6 +126,8 @@ public class BankAndCashStep extends TestBase{
 			System.out.println("Account not Created");
 		}
 		//Assert.assertTrue(actualText == expectedText);
+		
+		takeScreenshot();
 	}
 
 }
